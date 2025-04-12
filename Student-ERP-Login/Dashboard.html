@@ -79,29 +79,29 @@ $student = mysqli_fetch_assoc($result);
         <h2>Grades</h2>
         <table>
           <tr><th>Course</th><th>Grade</th></tr>
-          <tr><td>Data Structures</td><td></td></tr>
-          <tr><td>Operating Systems</td><td></td></tr>
-          <tr><td>R Programming</td><td></td></tr>
-          <tr><td>Python for Data Science</td><td></td></tr>
-          <tr><td>Design and Analysis of Algorithm</td><td></td></tr>
-          <tr><td>Data Science lab</td><td></td></tr>
-          <tr><td>DAA Lab</td><td></td></tr>
-          <tr><td>R Programming Lab</td><td></td></tr>
+          <tr><td>Data Structures</td><td>-</td></tr>
+          <tr><td>Operating Systems</td><td>-</td></tr>
+          <tr><td>R Programming</td><td>-</td></tr>
+          <tr><td>Python for Data Science</td><td>-</td></tr>
+          <tr><td>Design and Analysis of Algorithm</td><td>-</td></tr>
+          <tr><td>Data Science lab</td><td>-</td></tr>
+          <tr><td>DAA Lab</td><td>-</td></tr>
+          <tr><td>R Programming Lab</td><td>-</td></tr>
         </table>
       </section>
 
-      <section id="attendance" class="content-section">
+      <section id="Attendance" class="content-section">
         <h2>Attendance</h2>
         <table>
-          <tr><th>Subject</th><th>Assignment</th></tr>
-          <tr><th>Subject</th><th>Assignment</th></tr>
-          <tr><th>Subject</th><th>Assignment</th></tr>
-          <tr><th>Subject</th><th>Assignment</th></tr>
-          <tr><th>Subject</th><th>Assignment</th></tr>
-          <tr><th>Subject</th><th>Assignment</th></tr>
-          <tr><th>Subject</th><th>Assignment</th></tr>
-          <tr><th>Subject</th><th>Assignment</th></tr>
-          <tr><th>Subject</th><th>Assignment</th></tr>
+          <tr><th>Subject</th><th>Percentage</th></tr>
+          <tr><th>Data Structures</th><th>%</th></tr>
+          <tr><th>Operating Systems</th><th>%</th></tr>
+          <tr><th>R Programming</th><th>%</th></tr>
+          <tr><th>Python for Data science</th><th>%</th></tr>
+          <tr><th>Design and Analysis of Algorithm</th><th>%</th></tr>
+          <tr><th>Dta Science lab</th><th>%</th></tr>
+          <tr><th>DAA Lab</th><th>%</th></tr>
+          <tr><th>R Programming</th><th>%</th></tr>
          </table>
       </section>
           
@@ -121,8 +121,61 @@ $student = mysqli_fetch_assoc($result);
         </table>
       </section>
 
-    </main>
-  </div>
+    </section>
+    <section id="Result" class="content-section">    
+<title>Student Result</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  .form-container {
+    max-width: 400px;
+    margin: auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  label {
+    font-weight: bold;
+  }
+  .mandatory {
+    color: rgb(31, 73, 82);
+  }
+  select {
+    width: 100%;
+    padding: 8px;
+    margin: 10px 0 20px;
+  }
+</style>
+</head>
+<body>
+
+<div class="form-container">
+  <h2>STUDENT RESULT</h2>
+  <p class="mandatory">Note : * Marked fields are Mandatory</p>
+
+  <form>
+    <label for="session"><span class="mandatory">*</span>Session</label><br>
+    <select id="session" required>
+      <option value="">Please Select</option>
+      <option value="2023-2024">2023-2024</option>
+      <option value="2022-2023">2022-2023</option>
+      <!-- Add more options as needed -->
+    </select>
+
+    <label for="semester"><span class="mandatory">*</span>Semester</label><br>
+    <select id="semester" required>
+      <option value="">Please Select</option>
+      <option value="1">1st Semester</option>
+      <option value="2">2nd Semester</option>
+      <!-- Add more semesters as needed -->
+    </select>
+
+    <button type="submit">Submit</button>
+  </form>
+</div>
+
 
   <script src="Dashboard.js"></script>
 </body>
